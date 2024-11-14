@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coldplay Concert Ticket Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Coldplay Concert Ticket Booking</h1>
+        
+        <!-- Display current queue -->
+        <div class="queue-display">
+            <h2>Fans in Queue</h2>
+            <ul id="queueList"></ul> <!-- Updated ID for queue -->
+        </div>
+        
+        <!-- Controls for adding/removing users from the queue -->
+        <div class="controls">
+            <input type="text" id="username" placeholder="Enter fan's name">
+            <button onclick="joinQueue()">Book ticket</button> <!-- Changed function name -->
+            <button onclick="dequeueFan()">Process Next Fan</button> <!-- Changed function name -->
+        </div>
+        
+        <div id="status"></div>
+    </div>
+
+    <script src="script.js"></script> <!-- Linked script.js -->
+</body>
+</html>
+
